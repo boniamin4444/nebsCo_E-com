@@ -26,14 +26,11 @@ return new class extends Migration
             $table->string('product_thumbnail')->nullable();
             $table->string('short_description');
             $table->text('long_description');
-            $table->json('attributes');
             $table->json('sizes')->nullable(); 
             $table->json('colors')->nullable(); 
             $table->boolean('is_varient')->default(true);
             $table->boolean('is_deals')->default(true);
             $table->enum('status', ['active','inactive','draft']);
-            $table->boolean('is_approved')->default(true);
-            $table->boolean('is_digital')->default(true);
             $table->decimal('tax', 10, 2)->nullable()->default(0.00);
             $table->dateTime('expiration_date')->nullable();
             $table->timestamps();

@@ -6,6 +6,10 @@
     <title>Responsive Navbar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- in <head> -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    
     <style>
         .navbar-brand {
             font-weight: bold;
@@ -72,12 +76,12 @@
                 </form>
                 <div class="d-flex account-cart-spacing">
                     <a class="nav-link" href="#"><i class="bi bi-person me-1"></i>Account</a>
-                    <a class="nav-link" href="#"><i class="bi bi-cart me-1"></i>Cart</a>
+                    <a class="nav-link" href="{{ route('cart.all')}}"><i class="bi bi-cart me-1"></i>Cart</a>
                 </div>
             </div>
         </div>
     </nav>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

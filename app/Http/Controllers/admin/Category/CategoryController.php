@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('categories.index', compact('categories'));
+        return view('admin.pages.category.index', compact('categories'));
     }
     public function store(CategoryRequest $request)
     {
@@ -34,4 +34,16 @@ class CategoryController extends Controller
 
         return redirect()->route('categories.index')->with('success', 'Category created successfully.');
     }
+
+    public function destroy($id)
+    {
+        $category = Category::findOrFail($id);
+        if ($category->image) {
+            Storage::disk('public')->delete($category->image);
+        }
+
+        $category->delete();
+        return redirect()->route('categories.index')->with('success', 'Category deleted successfully.');
+    }
+    
 }

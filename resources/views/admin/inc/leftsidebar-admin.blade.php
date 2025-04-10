@@ -10,7 +10,7 @@
                          <span> Dashboard </span>
                      </a>
                  </li>
-                 <li class="menu-title mt-2">Apps</li>
+                 {{-- <li class="menu-title mt-2">Apps</li>
                  <li>
                      <a href="#order" data-bs-toggle="collapse">
                          <i class="mdi mdi-truck-delivery"></i>
@@ -113,6 +113,9 @@
                          </ul>
                      </div>
                  </li>
+ --}}
+
+
                  <li>
                      <a href="#category" data-bs-toggle="collapse">
                          <i class="mdi mdi-table"></i>
@@ -122,16 +125,16 @@
                      <div class="collapse" id="category">
                          <ul class="nav-second-level">
                              <li>
-                                 <a href="#"> Create</a>
+                                 <a href="{{ route('categories.index') }}"> CActegory</a>
                              </li>
-                             <li>
+                             {{-- <li>
                                  <a href="#"> Show All </a>
-                             </li>
+                             </li> --}}
                          </ul>
                      </div>
                  </li>
 
-                 <li>
+                 {{-- <li>
                      <a href="#subcategory" data-bs-toggle="collapse">
                          <i class="mdi mdi-table"></i>
                          <span> SubCategory </span>
@@ -183,7 +186,7 @@
                              </li>
                          </ul>
                      </div>
-                 </li>
+                 </li> --}}
 
 
                  <li>
@@ -198,13 +201,13 @@
                                  <a href="#">All Products</a>
                              </li>
                              <li>
-                                 <a href="#">Add Products</a>
+                                 <a href="{{ route('products.create')}}">Add Products</a>
                              </li>
                          </ul>
                      </div>
                  </li>
 
-
+{{-- 
                  <li>
                      <a href="#division" data-bs-toggle="collapse">
                          <i class="mdi mdi-account-group"></i>
@@ -310,7 +313,7 @@
                          <span> Subscriptions </span>
                      </a>
                  </li>
-
+ --}}
 
 
              </ul>
